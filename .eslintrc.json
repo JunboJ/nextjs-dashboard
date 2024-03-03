@@ -1,3 +1,15 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "plugins": ["sort-keys-fix"],
+  "rules": {
+    "semi": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["app/*.tsx", "app/*.ts", "app/*.js"],
+      "rules": {
+        "sort-keys-fix/sort-keys-fix": "warn"
+      }
+    }
+  ]
 }
